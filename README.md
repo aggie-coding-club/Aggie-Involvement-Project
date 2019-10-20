@@ -18,3 +18,5 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 After installation, clone & open the files with Android Studio and begin editing/pushing updates.
+
+- main.dart file is located in the lib folder
