@@ -56,10 +56,50 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 obscureText: true,
               ),
-              RaisedButton(
-                onPressed: () {},
-                child: Text("Sign in"),
-              )
+              ButtonTheme(
+                minWidth: 200,
+                height: 40,
+                  buttonColor: Color(0xFFD6D6D6),
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                    onPressed: () {},
+                    child: Text("Sign In"),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  RichText(
+                      text: TextSpan(
+                        text: "New here?",
+                        style: TextStyle(
+                          color: Color.fromRGBO(0, 0, 0, 1.0),
+                          fontSize: 17
+                        ),
+                      ),
+                  ),
+                 ButtonTheme(
+                  minWidth: 100,
+                  height: 35,
+                  buttonColor: Color(0xFFFFFFFF),
+                  child: FlatButton(
+                    shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                    onPressed: () {},
+                    child: RichText(
+                        text: TextSpan(
+                          text: "Sign Up",
+                          style: TextStyle(
+                            color: Color.fromRGBO(0, 0, 0, 1.0),
+                            fontSize: 17,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.w500
+                          ),
+                        ),
+                    ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
