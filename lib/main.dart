@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final loginButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Colors.white,
+      color: Color(0xff500000),
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Color(0xff500000),
+          color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.all(36.0),
             child: Column(
@@ -93,7 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 200.0,
                   child: Image.asset(
                     "assets/logo.png",
-                    color: Colors.white,
                     fit: BoxFit.contain,
                   ),
                 ),
