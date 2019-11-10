@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: "Email",
           border:
-          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+          OutlineInputBorder(borderRadius: BorderRadius.circular(36.0))),
     );
 
     final passwordField = TextField(
@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final loginButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Color(0xff500000),
+      color: Colors.white,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Colors.white,
+          color: Color(0xff500000),
           child: Padding(
             padding: const EdgeInsets.all(36.0),
             child: Column(
@@ -90,13 +90,13 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-                  height: 155.0,
+                  height: 200.0,
                   child: Image.asset(
                     "assets/logo.png",
+                    color: Colors.white,
                     fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(height: 45.0),
                 emailField,
                 SizedBox(height: 25.0),
                 passwordField,
