@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "575956990232",
+    "firebase_url": "https://aggie-involvement-projec-bebbe.firebaseio.com",
+    "project_id": "aggie-involvement-projec-bebbe",
+    "storage_bucket": "aggie-involvement-projec-bebbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575956990232:android:799480aca1e494043a066d",
+        "android_client_info": {
+          "package_name": "com.example.ag_inv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575956990232-upj8vnsej56fijjt5i1tl5rmbmftgos7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc017rg_ulHbsoqR6zvR4K5mh13rC9CeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575956990232-upj8vnsej56fijjt5i1tl5rmbmftgos7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

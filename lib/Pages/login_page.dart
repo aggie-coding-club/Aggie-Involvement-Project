@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 class LoginPage extends StatefulWidget {
   String _email, _password;
@@ -49,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                   validator: (input){
                     // ignore: missing_return
                     if(input.length < 6){
-                      return "Please enter a password";
+                      return "Please enter a longer password";
                     }
                   },
                   onSaved: (input) => _password = input,
@@ -108,5 +110,19 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  Future<void> signIn() async{
+    final formState = _formKey.currentState;
+    if(formState.validate()){
+      formState.save();
+      try{
+        AuthResult result = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
+        FirebaseUser user = result.user;
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Home(user: user)));
+      }catch(e){
+        print(e.message);
+      }
+    }
   }
 }
