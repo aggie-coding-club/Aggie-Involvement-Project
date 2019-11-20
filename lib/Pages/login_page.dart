@@ -46,9 +46,12 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   onSaved: (input) => _email = input,
                   style: TextStyle(
-                    color: Colors.white
+                    color: Colors.white,
+                    shadows: [Shadow()]
                   ),
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     labelText: "Email"
                   ),
                 ),
@@ -64,14 +67,16 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   onSaved: (input) => _password = input,
                   decoration: InputDecoration(
-                      labelText: "Pasword"
+                      labelText: "Password",
+                      filled: true,
+                      fillColor: Colors.white
                   ),
                   obscureText: true,
                 ),
                 ButtonTheme(
                   minWidth: 200,
                   height: 40,
-                    buttonColor: Color(0xFFD6D6D6),
+                    buttonColor: Colors.white,
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
                       onPressed: () {},
@@ -93,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                    ButtonTheme(
                     minWidth: 100,
                     height: 35,
-                    buttonColor: Color(0xFFFFFFFF),
+                    buttonColor: Colors.white,
                     child: FlatButton(
                       shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
                       onPressed: () {},
