@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
       body : Form(
         key: _formKey,
         child: Container(
-          color: Colors.redAccent[700],
+          color: Color(0xff500000),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -45,6 +45,9 @@ class _LoginPageState extends State<LoginPage> {
                     }
                   },
                   onSaved: (input) => _email = input,
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
                   decoration: InputDecoration(
                     labelText: "Email"
                   ),
@@ -56,6 +59,9 @@ class _LoginPageState extends State<LoginPage> {
                       return "Please enter a longer password";
                     }
                   },
+                  style: TextStyle(
+                      color: Colors.white
+                  ),
                   onSaved: (input) => _password = input,
                   decoration: InputDecoration(
                       labelText: "Pasword"
@@ -79,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                         text: TextSpan(
                           text: "New here?",
                           style: TextStyle(
-                            color: Color.fromRGBO(0, 0, 0, 1.0),
+                            color: Colors.white,
                             fontSize: 17
                           ),
                         ),
@@ -95,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                           text: TextSpan(
                             text: "Sign Up",
                             style: TextStyle(
-                              color: Color.fromRGBO(0, 0, 0, 1.0),
+                              color: Colors.white,
                               fontSize: 17,
                               fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.w500
