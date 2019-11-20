@@ -23,11 +23,69 @@ class MyApp extends StatelessWidget {
 //    MaterialColor colorCustom = MaterialColor(0xFFFFFFFF, color);
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
+      theme: new ThemeData(
+        primaryColor: Colors.red, fontFamily: 'Raleway'
       ),
-      home: LoginPage(),
+      home: new FeedPage(title: 'My Feed'),
     );
   }
 }
 
+class FeedPage extends StatefulWidget {
+  FeedPage({Key key, this.title}) : super(key: key);
+  
+  final String title;
+
+  @override
+  _FeedPageState createState() => _FeedPageState();
+}
+
+class _FeedPageState extends State<FeedPage>{
+  @override
+  Widget build(BuildContext context) {
+    final topAppBar = AppBar(
+      elevation: 0.1,
+      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      title: Text(widget.title,style: TextStyle(color: Colors.white)),
+      actions: <Widget>[
+        IconButton(
+          icon: Icon(Icons.list, color: Colors.white),
+          onPressed: () {},
+        )
+      ],
+    );
+
+    final makeBottom = Container(
+      height: 55.0,
+      child: BottomAppBar(
+        color: Color.fromRGBO(58,66,86,1.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.home, color: Colors.white),
+              onPressed: () {}
+            ),
+            IconButton(
+              icon: Icon(Icons.calendar_today, color: Colors.white),
+              onPressed: () {}
+            ),
+            IconButton(
+              icon: Icon(Icons.account_circle, color: Colors.white),
+              onPressed: () {}
+            )
+          ],
+        )
+      )
+    );
+
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(55, 55, 55, 1.0),
+      appBar: topAppBar,
+      bottomNavigationBar: makeBottom,
+    );
+    
+  }
+
+  
+}
